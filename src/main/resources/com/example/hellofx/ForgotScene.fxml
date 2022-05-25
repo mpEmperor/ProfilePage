@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hellofx.ForgotController">
+   <children>
+      <Label layoutX="110.0" layoutY="132.0" text="Username:" />
+      <TextField fx:id="username" layoutX="179.0" layoutY="128.0" onAction="#recoverPassword" />
+      <Label fx:id="questionText" layoutX="179.0" layoutY="163.0" text="Question" visible="false" />
+      <TextField fx:id="answerField" layoutX="179.0" layoutY="180.0" onAction="#recoverPassword" visible="false" />
+      <PasswordField fx:id="passwordField" layoutX="179.0" layoutY="219.0" visible="false" />
+      <PasswordField fx:id="passwordField1" layoutX="179.0" layoutY="257.0" onAction="#confirm" visible="false" />
+      <Button fx:id="recoverButton" layoutX="350.0" layoutY="180.0" mnemonicParsing="false" onAction="#recoverPassword" text="Recover Password" visible="false" />
+      <Button layoutX="350.0" layoutY="128.0" mnemonicParsing="false" onAction="#recoverPassword" text="Enter" />
+      <Label fx:id="passwordText" layoutX="83.0" layoutY="224.0" text="New password: " visible="false" />
+      <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#returnLogin" text="Return to login" />
+      <Label fx:id="passwordText1" layoutX="66.0" layoutY="262.0" text="Confirm password:" visible="false" />
+      <Button fx:id="ConfirmButton" layoutX="228.0" layoutY="298.0" mnemonicParsing="false" onAction="#confirm" text="Confirm" visible="false" />
+   </children>
+</AnchorPane>
