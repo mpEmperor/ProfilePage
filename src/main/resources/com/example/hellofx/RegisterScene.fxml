@@ -3,7 +3,9 @@
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -12,9 +14,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hellofx.RegisterController">
    <children>
-      <TextField fx:id="RegisterUserName" layoutX="220.0" layoutY="174.0" onAction="#register" />
-      <PasswordField fx:id="RegisterPassword" layoutX="219.0" layoutY="212.0" onAction="#register" />
-      <ComboBox fx:id="questionsBox" layoutX="219.0" layoutY="246.0" prefHeight="26.0" prefWidth="160.0" promptText="Pick a Question: ">
+      <TextField fx:id="firstNameField" layoutX="139.0" layoutY="115.0" />
+      <TextField fx:id="lastNameField" layoutX="342.0" layoutY="115.0" />
+      <TextField fx:id="RegisterUserName" layoutX="139.0" layoutY="175.0" onAction="#register" />
+      <PasswordField fx:id="RegisterPassword" layoutX="341.0" layoutY="175.0" onAction="#register" />
+      <ComboBox fx:id="questionsBox" layoutX="139.0" layoutY="234.0" prefHeight="26.0" prefWidth="160.0" promptText="Pick a Question: ">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="What is your favorite movie?" />
@@ -26,39 +30,25 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <TextField fx:id="answer" layoutX="219.0" layoutY="279.0" onAction="#register" />
-      <Label layoutX="114.0" layoutY="174.0" text="Username:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="114.0" layoutY="211.0" text="Password:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      <TextField fx:id="answer" layoutX="340.0" layoutY="234.0" onAction="#register" />
+      <Label layoutX="189.0" layoutY="153.0" text="Username:" />
+      <Label layoutX="392.0" layoutY="153.0" text="Password:" />
       <Label layoutX="246.0" layoutY="14.0" text="Signup">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="RegisterButton" layoutX="272.0" layoutY="321.0" mnemonicParsing="false" onAction="#register" text="Register" />
-      <Label fx:id="existText" layoutX="209.0" layoutY="151.0" text="This username is taken. " textFill="RED" visible="false">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      <Button fx:id="RegisterButton" layoutX="281.0" layoutY="339.0" mnemonicParsing="false" onAction="#register" text="Register" />
+      <Label fx:id="existText" layoutX="7.0" layoutY="180.0" text="This username is taken. " textFill="RED" visible="false" />
       <Label fx:id="accountText" layoutX="393.0" layoutY="365.0" text="Already have an account?" />
       <Button fx:id="loginButton" layoutX="538.0" layoutY="360.0" mnemonicParsing="false" onAction="#accountExist" text="Login" />
-      <Label layoutX="52.0" layoutY="246.0" text="Security Question:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="279.0" text="Security Answer:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      <Label layoutX="169.0" layoutY="211.0" text="Security Question:" />
+      <Label layoutX="375.0" layoutY="211.0" text="Security Answer:" />
+      <Label layoutX="188.0" layoutY="90.0" text="First Name:" />
+      <Label layoutX="391.0" layoutY="90.0" text="Last Name:" />
+      <DatePicker fx:id="birthdayPick" layoutX="126.0" layoutY="288.0" />
+      <ColorPicker fx:id="themePick" layoutX="357.0" layoutY="288.0" />
+      <Label layoutX="185.0" layoutY="268.0" text="Date of Birth:" />
+      <Label layoutX="399.0" layoutY="268.0" text="Theme:" />
    </children>
 </AnchorPane>

@@ -10,6 +10,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.awt.*;
@@ -19,9 +23,15 @@ import java.net.URISyntaxException;
 public class LogoutController {
     @FXML
     ImageView myImageView;
+    @FXML
+    AnchorPane scenePane;
     Parent root;
     Scene scene;
     Stage stage;
+    public void initialize() {
+        scenePane.setBackground(new Background(new BackgroundFill(LoginController.account.getTheme(), null, null)));
+
+    }
     public void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
@@ -42,6 +52,4 @@ public class LogoutController {
     public void vsco() throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://vsco.co/jaidawilson/media/628c5d890acb486dd2832d29"));
     }
-
-
 }

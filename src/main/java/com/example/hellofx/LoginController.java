@@ -25,6 +25,7 @@ public class LoginController {
     Scene scene;
     Parent root;
     private boolean isShow = false;
+    static Account account;
     public void login(ActionEvent event) throws IOException {
         String username = loginUsername.getText();
         String password;
@@ -36,6 +37,7 @@ public class LoginController {
         for (int i = 0; i < Accounts.getAccs().size(); i ++) {
             if (Accounts.getAccs().get(i).getUserPass().containsKey(username) && Accounts.getAccs().get(i).getUserPass().get(username).equals(password)) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("LogoutScene.fxml"));
+                account = Accounts.getAccs().get(i);
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);

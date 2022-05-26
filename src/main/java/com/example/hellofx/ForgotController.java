@@ -63,7 +63,7 @@ public class ForgotController {
     }
     public void confirm(ActionEvent event) throws IOException {
         for (int i = 0; i < Accounts.getAccs().size(); i ++) {
-            if (Accounts.getAccs().get(i).getUserPass().containsKey(username.getText())) {
+            if (Accounts.getAccs().get(i).getUserPass().containsKey(username.getText()) && passwordField.getText().equals(passwordField1.getText())) {
                 Accounts.getAccs().get(i).getUserPass().replace(username.getText(), passwordField.getText());
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
                 root = loader.load();

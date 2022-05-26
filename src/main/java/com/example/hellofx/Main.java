@@ -5,7 +5,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.time.LocalDate;
 
 public class Main extends Application {
 
@@ -18,6 +21,10 @@ public class Main extends Application {
         Account defaultAccount = new Account();
         defaultAccount.getUserPass().put("37901101", "pm101");
         defaultAccount.getQuestAns().put("What is your favorite food?", "pizza");
+        defaultAccount.setFirstName("Prabnoor");
+        defaultAccount.setLastName("Multani");
+        defaultAccount.setTheme(Color.WHITE);
+        defaultAccount.setBirthday(LocalDate.of(2004, 6, 30));
         Accounts.getAccs().add(defaultAccount);
         Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
         stage.setTitle("Predsby");
