@@ -8,29 +8,32 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.awt.*;
+import java.io.IOException;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 
 public class LogoutController {
     @FXML
-    ImageView myImageView;
+    private AnchorPane scenePane;
     @FXML
-    AnchorPane scenePane;
+    private Label nameOfUser;
+    @FXML
+    private Label bday;
     Parent root;
     Scene scene;
     Stage stage;
     public void initialize() {
         scenePane.setBackground(new Background(new BackgroundFill(LoginController.account.getTheme(), null, null)));
-
+        nameOfUser.setText(LoginController.account.getFirstName() + " " + LoginController.account.getLastName());
+        bday.setText(LoginController.account.getBirthday().toString());
     }
     public void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -45,9 +48,6 @@ public class LogoutController {
             stage.setScene(scene);
             stage.show();
         }
-    }
-    public void displayImage() {
-       myImageView.setImage(new Image("img2.jpeg"));
     }
     public void vsco() throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://vsco.co/jaidawilson/media/628c5d890acb486dd2832d29"));

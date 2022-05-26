@@ -27,7 +27,7 @@ public class Main extends Application {
         defaultAccount.setBirthday(LocalDate.of(2004, 6, 30));
         Accounts.getAccs().add(defaultAccount);
         Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
-        stage.setTitle("Predsby");
+        stage.setTitle("Prab's attempt at Social Media");
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

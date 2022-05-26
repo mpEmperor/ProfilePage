@@ -1,7 +1,6 @@
 package com.example.hellofx;
 
 import javafx.scene.paint.Color;
-
 import java.time.LocalDate;
 import java.util.HashMap;
 
