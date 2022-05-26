@@ -38,7 +38,6 @@ public class ForgotController {
     private Scene scene;
     private Parent root;
 
-
     public void recoverPassword() {
         String name = username.getText();
         for (int i = 0; i < Accounts.getAccs().size(); i ++) {

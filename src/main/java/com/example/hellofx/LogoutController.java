@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -22,6 +23,8 @@ import java.net.URISyntaxException;
 
 public class LogoutController {
     @FXML
+    private ImageView myImageView;
+    @FXML
     private AnchorPane scenePane;
     @FXML
     private Label nameOfUser;
@@ -34,6 +37,7 @@ public class LogoutController {
         scenePane.setBackground(new Background(new BackgroundFill(LoginController.account.getTheme(), null, null)));
         nameOfUser.setText(LoginController.account.getFirstName() + " " + LoginController.account.getLastName());
         bday.setText(LoginController.account.getBirthday().toString());
+        myImageView.setImage(LoginController.account.getAvatar());
     }
     public void logout(ActionEvent event) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

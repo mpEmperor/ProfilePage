@@ -8,7 +8,9 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -55,11 +57,34 @@
       <ColorPicker fx:id="themePick" layoutX="245.0" layoutY="286.0" />
       <Label layoutX="73.0" layoutY="266.0" text="Date of Birth:" />
       <Label layoutX="287.0" layoutY="266.0" text="Theme:" />
-      <ImageView fx:id="registerImageView" fitHeight="156.0" fitWidth="129.0" layoutX="433.0" layoutY="108.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../img.png" />
-         </image>
-      </ImageView>
       <Button fx:id="avatarButton" layoutX="448.0" layoutY="283.0" mnemonicParsing="false" onAction="#changeAvatar" text="Change Avatar" />
+      <ImageView fx:id="regImgView" fitHeight="150.0" fitWidth="200.0" layoutX="397.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane fx:id="avatarPane" layoutX="116.0" layoutY="4.0" prefHeight="393.0" prefWidth="393.0" visible="false">
+         <children>
+            <ImageView fx:id="imgView1" fitHeight="91.0" fitWidth="92.0" layoutX="14.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../luffypic.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgView2" fitHeight="91.0" fitWidth="92.0" layoutX="151.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../narutopic.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgView3" fitHeight="91.0" fitWidth="92.0" layoutX="288.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../bleachpic.jpeg" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="rButton1" layoutX="51.0" layoutY="261.0" mnemonicParsing="false">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rButtons" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rButton2" layoutX="188.0" layoutY="261.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <RadioButton fx:id="rButton3" layoutX="325.0" layoutY="261.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <Button layoutX="170.0" layoutY="301.0" mnemonicParsing="false" onAction="#applyAvatar" text="Apply" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

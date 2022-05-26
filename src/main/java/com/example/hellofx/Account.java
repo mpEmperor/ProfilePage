@@ -1,6 +1,7 @@
 package com.example.hellofx;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -13,6 +14,14 @@ public class Account {
     private Color theme;
     private LocalDate birthday;
     private Image avatar;
+
+    public Image getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(Image avatar) {
+        this.avatar = avatar;
+    }
 
     public String getFirstName() {
         return firstName;
