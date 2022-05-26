@@ -9,16 +9,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hellofx.RegisterController">
    <children>
-      <TextField fx:id="firstNameField" layoutX="139.0" layoutY="115.0" />
-      <TextField fx:id="lastNameField" layoutX="342.0" layoutY="115.0" />
-      <TextField fx:id="RegisterUserName" layoutX="139.0" layoutY="175.0" onAction="#register" />
-      <PasswordField fx:id="RegisterPassword" layoutX="341.0" layoutY="175.0" onAction="#register" />
-      <ComboBox fx:id="questionsBox" layoutX="139.0" layoutY="234.0" prefHeight="26.0" prefWidth="160.0" promptText="Pick a Question: ">
+      <TextField fx:id="firstNameField" layoutX="27.0" layoutY="113.0" />
+      <TextField fx:id="lastNameField" layoutX="230.0" layoutY="113.0" />
+      <TextField fx:id="RegisterUserName" layoutX="27.0" layoutY="173.0" onAction="#register" />
+      <PasswordField fx:id="RegisterPassword" layoutX="229.0" layoutY="173.0" onAction="#register" />
+      <ComboBox fx:id="questionsBox" layoutX="27.0" layoutY="232.0" prefHeight="26.0" prefWidth="160.0" promptText="Pick a Question: ">
          <items>
             <FXCollections fx:factory="observableArrayList">
                <String fx:value="What is your favorite movie?" />
@@ -30,25 +32,34 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <TextField fx:id="answer" layoutX="340.0" layoutY="234.0" onAction="#register" />
-      <Label layoutX="189.0" layoutY="153.0" text="Username:" />
-      <Label layoutX="392.0" layoutY="153.0" text="Password:" />
+      <TextField fx:id="answer" layoutX="228.0" layoutY="232.0" onAction="#register" />
+      <Label layoutX="77.0" layoutY="151.0" text="Username:" />
+      <Label layoutX="280.0" layoutY="151.0" text="Password:" />
       <Label layoutX="246.0" layoutY="14.0" text="Signup">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
       <Button fx:id="RegisterButton" layoutX="281.0" layoutY="339.0" mnemonicParsing="false" onAction="#register" text="Register" />
-      <Label fx:id="existText" layoutX="7.0" layoutY="180.0" text="This username is taken. " textFill="RED" visible="false" />
+      <Label fx:id="existText" layoutX="57.0" layoutY="162.0" text="This username is taken. " textFill="RED" visible="false">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
       <Label fx:id="accountText" layoutX="393.0" layoutY="365.0" text="Already have an account?" />
       <Button fx:id="loginButton" layoutX="538.0" layoutY="360.0" mnemonicParsing="false" onAction="#accountExist" text="Login" />
-      <Label layoutX="169.0" layoutY="211.0" text="Security Question:" />
-      <Label layoutX="375.0" layoutY="211.0" text="Security Answer:" />
-      <Label layoutX="188.0" layoutY="90.0" text="First Name:" />
-      <Label layoutX="391.0" layoutY="90.0" text="Last Name:" />
-      <DatePicker fx:id="birthdayPick" layoutX="126.0" layoutY="288.0" />
-      <ColorPicker fx:id="themePick" layoutX="357.0" layoutY="288.0" />
-      <Label layoutX="185.0" layoutY="268.0" text="Date of Birth:" />
-      <Label layoutX="399.0" layoutY="268.0" text="Theme:" />
+      <Label layoutX="57.0" layoutY="209.0" text="Security Question:" />
+      <Label layoutX="263.0" layoutY="209.0" text="Security Answer:" />
+      <Label layoutX="76.0" layoutY="88.0" text="First Name:" />
+      <Label layoutX="279.0" layoutY="88.0" text="Last Name:" />
+      <DatePicker fx:id="birthdayPick" layoutX="14.0" layoutY="286.0" />
+      <ColorPicker fx:id="themePick" layoutX="245.0" layoutY="286.0" />
+      <Label layoutX="73.0" layoutY="266.0" text="Date of Birth:" />
+      <Label layoutX="287.0" layoutY="266.0" text="Theme:" />
+      <ImageView fx:id="registerImageView" fitHeight="156.0" fitWidth="129.0" layoutX="433.0" layoutY="108.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="avatarButton" layoutX="448.0" layoutY="283.0" mnemonicParsing="false" onAction="#changeAvatar" text="Change Avatar" />
    </children>
 </AnchorPane>

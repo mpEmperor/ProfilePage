@@ -22,7 +22,6 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="18.0" layoutY="159.0" mnemonicParsing="false" text="Change Avatar" />
       <Label fx:id="bday" layoutX="141.0" layoutY="43.0" text="Label" />
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package com.example.hellofx;
 
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -11,6 +12,7 @@ public class Account {
     private String lastName;
     private Color theme;
     private LocalDate birthday;
+    private Image avatar;
 
     public String getFirstName() {
         return firstName;
