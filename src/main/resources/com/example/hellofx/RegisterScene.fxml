@@ -64,29 +64,47 @@
          </image></ImageView>
       <AnchorPane fx:id="avatarPane" layoutX="116.0" layoutY="4.0" prefHeight="393.0" prefWidth="393.0" visible="false">
          <children>
-            <ImageView fx:id="imgView1" fitHeight="91.0" fitWidth="92.0" layoutX="14.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgView1" fitHeight="91.0" fitWidth="92.0" layoutX="14.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../luffypic.jpeg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgView2" fitHeight="91.0" fitWidth="92.0" layoutX="151.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgView2" fitHeight="91.0" fitWidth="92.0" layoutX="151.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../narutopic.jpeg" />
                </image>
             </ImageView>
-            <ImageView fx:id="imgView3" fitHeight="91.0" fitWidth="92.0" layoutX="288.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgView3" fitHeight="91.0" fitWidth="92.0" layoutX="288.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../bleachpic.jpeg" />
                </image>
             </ImageView>
-            <RadioButton fx:id="rButton1" layoutX="51.0" layoutY="261.0" mnemonicParsing="false">
+            <RadioButton fx:id="rButton1" layoutX="51.0" layoutY="170.0" mnemonicParsing="false">
                <toggleGroup>
                   <ToggleGroup fx:id="rButtons" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="rButton2" layoutX="188.0" layoutY="261.0" mnemonicParsing="false" toggleGroup="$rButtons" />
-            <RadioButton fx:id="rButton3" layoutX="325.0" layoutY="261.0" mnemonicParsing="false" toggleGroup="$rButtons" />
-            <Button layoutX="170.0" layoutY="301.0" mnemonicParsing="false" onAction="#applyAvatar" text="Apply" />
+            <RadioButton fx:id="rButton2" layoutX="188.0" layoutY="170.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <RadioButton fx:id="rButton3" layoutX="325.0" layoutY="170.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <Button layoutX="172.0" layoutY="336.0" mnemonicParsing="false" onAction="#applyAvatar" text="Apply" />
+            <ImageView fx:id="imgView4" fitHeight="91.0" fitWidth="92.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../erenpic.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgView5" fitHeight="91.0" fitWidth="92.0" layoutX="151.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../gokupic.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgView6" fitHeight="91.0" fitWidth="92.0" layoutX="290.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../defaultpic.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="rButton4" layoutX="51.0" layoutY="306.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <RadioButton fx:id="rButton5" layoutX="188.0" layoutY="306.0" mnemonicParsing="false" toggleGroup="$rButtons" />
+            <RadioButton fx:id="rButton6" layoutX="325.0" layoutY="306.0" mnemonicParsing="false" toggleGroup="$rButtons" />
          </children>
       </AnchorPane>
    </children>

@@ -40,13 +40,9 @@ public class RegisterController {
     @FXML
     private AnchorPane avatarPane;
     @FXML
-    private ImageView imgView1;
+    private ImageView imgView1, imgView2, imgView3, imgView4, imgView5, imgView6;
     @FXML
-    private ImageView imgView2;
-    @FXML
-    private ImageView imgView3;
-    @FXML
-    private RadioButton rButton1, rButton2, rButton3;
+    private RadioButton rButton1, rButton2, rButton3, rButton4, rButton5, rButton6;
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -107,6 +103,12 @@ public class RegisterController {
             regImgView.setImage(imgView2.getImage());
         } else if (rButton3.isSelected()) {
             regImgView.setImage(imgView3.getImage());
+        } else if (rButton4.isSelected()) {
+            regImgView.setImage(imgView4.getImage());
+        } else if (rButton5.isSelected()) {
+            regImgView.setImage(imgView5.getImage());
+        } else if (rButton6.isSelected()) {
+            regImgView.setImage(imgView6.getImage());
         }
         avatarPane.setVisible(false);
     }
