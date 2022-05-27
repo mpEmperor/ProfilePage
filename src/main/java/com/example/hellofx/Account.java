@@ -1,19 +1,23 @@
 package com.example.hellofx;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Account {
-    private HashMap<String, String> userPass = new HashMap<String, String>();
-    private HashMap<String, String> questAns = new HashMap<String, String>();
+    private HashMap<String, String> userPass;
+    private HashMap<String, String> questAns;
     private String firstName;
     private String lastName;
     private Color theme;
     private LocalDate birthday;
     private Image avatar;
+
+    public Account() {
+        this.userPass = new HashMap<>();
+        this.questAns = new HashMap<>();
+    }
 
     public Image getAvatar() {
         return avatar;
@@ -58,8 +62,6 @@ public class Account {
     public HashMap<String, String> getUserPass() {
         return userPass;
     }
-
-
     public void setUserPass(HashMap<String, String> userPass) {
         this.userPass = userPass;
     }

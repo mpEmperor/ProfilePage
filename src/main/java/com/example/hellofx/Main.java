@@ -1,5 +1,4 @@
 package com.example.hellofx;
-import com.google.gson.reflect.TypeToken;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,24 +8,13 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
-import java.lang.reflect.Type;
 import java.time.LocalDate;
-import java.util.Map;
-
 import com.google.gson.Gson;
 
 public class Main extends Application {
-    public Main() throws FileNotFoundException {
-    }
-
     public static void main(String[] args) {
         launch(args);
     }
-
     @Override
     public void start(Stage stage) throws Exception {
         Account defaultAccount = new Account();

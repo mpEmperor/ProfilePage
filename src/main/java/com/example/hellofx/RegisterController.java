@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 
-
 public class RegisterController {
     @FXML
     private ImageView regImgView;
@@ -48,7 +47,6 @@ public class RegisterController {
     private ImageView imgView3;
     @FXML
     private RadioButton rButton1, rButton2, rButton3;
-
     private Stage stage;
     private Scene scene;
     private Parent root;
