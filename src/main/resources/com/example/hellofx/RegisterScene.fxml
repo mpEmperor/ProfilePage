@@ -58,7 +58,10 @@
       <Label layoutX="73.0" layoutY="266.0" text="Date of Birth:" />
       <Label layoutX="287.0" layoutY="266.0" text="Theme:" />
       <Button fx:id="avatarButton" layoutX="448.0" layoutY="283.0" mnemonicParsing="false" onAction="#changeAvatar" text="Change Avatar" />
-      <ImageView fx:id="regImgView" fitHeight="150.0" fitWidth="200.0" layoutX="397.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="regImgView" fitHeight="150.0" fitWidth="200.0" layoutX="422.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../defaultpic.png" />
+         </image></ImageView>
       <AnchorPane fx:id="avatarPane" layoutX="116.0" layoutY="4.0" prefHeight="393.0" prefWidth="393.0" visible="false">
          <children>
             <ImageView fx:id="imgView1" fitHeight="91.0" fitWidth="92.0" layoutX="14.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">

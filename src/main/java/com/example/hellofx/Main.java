@@ -1,16 +1,27 @@
 package com.example.hellofx;
+import com.google.gson.reflect.TypeToken;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.time.LocalDate;
+import java.util.Map;
+
+import com.google.gson.Gson;
 
 public class Main extends Application {
+    public Main() throws FileNotFoundException {
+    }
 
     public static void main(String[] args) {
         launch(args);
@@ -25,6 +36,7 @@ public class Main extends Application {
         defaultAccount.setLastName("Multani");
         defaultAccount.setTheme(Color.WHITE);
         defaultAccount.setBirthday(LocalDate.of(2004, 6, 30));
+        defaultAccount.setAvatar(new Image("luffypic.jpeg"));
         Accounts.getAccs().add(defaultAccount);
         Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
         stage.setTitle("Prab's attempt at Social Media");
@@ -41,10 +53,8 @@ public class Main extends Application {
         alert.setTitle("Exit");
         alert.setHeaderText("You're about to exit out of the application.");
         alert.setContentText("Confirm exit");
-
         if (alert.showAndWait().get() == ButtonType.OK) {
             stage.close();
         }
-
     }
 }
