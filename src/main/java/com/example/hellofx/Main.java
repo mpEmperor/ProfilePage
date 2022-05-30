@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.time.LocalDate;
-import com.google.gson.Gson;
 
 public class Main extends Application {
     public static void main(String[] args) {
